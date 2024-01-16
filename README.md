@@ -23,4 +23,5 @@ location / {
 `cd /` to access top-level directory.
 
 `/etc/nginx/sites-enabled` this is the directory where backend server configuration lives.
+
 `/var/www/html` this is the directory where frontend assets live.
