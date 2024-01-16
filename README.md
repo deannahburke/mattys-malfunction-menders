@@ -20,8 +20,19 @@ location / {
         }
 ```
 
+---
+
+
 `cd /` to access top-level directory.
 
 `/etc/nginx/sites-enabled` this is the directory where backend server configuration lives.
 
 `/var/www/html` this is the directory where frontend assets live.
+
+---
+
+To copy the assets from the cloned Github repo, `cd` into the directory.  Example: `cd mattys-malfunction-menders/Matty\'s\ Malfunction\ Menders\ Website/`
+
+The above `cd` command is run in DO Console which prefers to escape special characters and spaces.
+
+Then run `cp -R * /var/www/html/`
