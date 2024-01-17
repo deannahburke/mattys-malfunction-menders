@@ -1,21 +1,26 @@
 # mattys-malfunction-menders
 Matty's Pathfinder Group Project
 
-For those using Digital Ocean (DO) - nginx light, please follow the below steps to enable assistance Server Side Includes (SSI)
+For those using Digital Ocean (DO) - nginx light, please follow the below steps to enable Server Side Includes (SSI)
 
 Run below commands in your DO console:
+
 `cat etc/nginx`
+
 `cd sites-enabled`
+
 `cat default`
+
 
 Add `ssi on;` to the `location` section in the `default` file to enable SSI for the root path `/`
 
 
 ```
 location / {
+                ssi on;
+
                 # First attempt to serve request as file, then
                 # as directory, then fall back to displaying a 404.
-                ssi on;
                 try_files $uri $uri/ =404;
         }
 ```
@@ -31,8 +36,9 @@ location / {
 
 ---
 
-To copy the assets from the cloned Github repo, `cd` into the directory.  Example: `cd mattys-malfunction-menders/Matty\'s\ Malfunction\ Menders\ Website/`
+To copy the assets from the cloned Github repo, `cd` into the directory.
+Example: `cd mattys-malfunction-menders/Matty\'s\ Malfunction\ Menders\ Website/`
 
 The above `cd` command is run in DO Console which prefers to escape special characters and spaces.
 
-Then run `cp -R * /var/www/html/`
+Then run `cp -R * /var/www/html/` this will copy over the files from the Github repo.
