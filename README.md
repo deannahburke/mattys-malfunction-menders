@@ -5,11 +5,13 @@ For those using Digital Ocean (DO) - nginx light, please follow the below steps 
 
 Run below commands in your DO console:
 
-`cat etc/nginx`
+`cd /etc/nginx`
 
 `cd sites-enabled`
 
-`cat default`
+`cat default` to view the file
+
+`nano default` to edit the file (to enable SSI)
 
 
 Add `ssi on;` to the `location` section in the `default` file to enable SSI for the root path `/`
