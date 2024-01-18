@@ -25,6 +25,8 @@ location / {
         }
 ```
 
+Run `systemctl restart nginx` to restart Nginx server since the server configuration was changed
+
 ---
 
 
