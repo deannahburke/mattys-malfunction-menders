@@ -46,3 +46,11 @@ Example: `cd mattys-malfunction-menders/Matty\'s\ Malfunction\ Menders\ Website/
 The above `cd` command is run in DO Console which prefers to escape special characters and spaces.
 
 Then run `cp -R * /var/www/html/` this will copy over the files from the Github repo.
+
+---
+
+To take the server down, in the DO console type `systemctl stop nginx`
+We should see the default 503 "Backend unavailalbe" error page from the Fastly layer.
+
+To bring the server back up, in the DO console type `systemctl start nginx`
+Do a hard refresh on the browser, if all goes well, you should see the content from index.html file
